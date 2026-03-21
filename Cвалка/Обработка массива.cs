@@ -16,7 +16,7 @@ namespace Обработка_массива
             byte a1 = 1, b1 = 0;
             while (b1 == 0)
             {
-                if (!byte.TryParse(Console.ReadLine(), out a1) || a1<=0)
+                if (!byte.TryParse(Console.ReadLine(), out a1) || a1 <= 0)
                     Console.Write("Ошибка! Введите номер задания еще раз ");
                 /*else if (a1 <= 0 || a1 > 8)
                     Console.Write("В дз всего 8 заданий, Введите номер задания еще раз ");*/
@@ -35,7 +35,7 @@ namespace Обработка_массива
                 case 3:
                     n3();
                     break;
-                 case 4:
+                case 4:
                     n4();
                     break;
                 case 5:
@@ -62,7 +62,7 @@ namespace Обработка_массива
                 {
                     if (!byte.TryParse(Console.ReadLine(), out a))
                         Console.Write("оШИБКА, введите длину массива еще раз: ");
-                    else if (a1 <= 0)
+                    else if (a <= 0)
                         Console.Write("длина массива не может быть неположительной\nВведите длину массива еще раз ");
                     else
                         outa++;
@@ -76,7 +76,7 @@ namespace Обработка_массива
                     {
                         массив[i] = r.Next(-1, 10);
                         if (массив[i] == 5)
-                        qw++;
+                            qw++;
                     }
                 }
                 Console.WriteLine("Наш массив");
@@ -104,7 +104,7 @@ namespace Обработка_массива
                 {
                     for (int i = 0; i < массив.Length; i++)
                     {
-                        массив[i] = r.Next(10000,66000);
+                        массив[i] = r.Next(10000, 66000);
                         if (массив[i] > 65530)
                             qw++;
                     }
@@ -143,11 +143,11 @@ namespace Обработка_массива
                 for (int i = 0; i < массив.Length; i++)
                 {
                     Console.Write($"{массив[i]} ");
-                        }
+                }
                 //Console.WriteLine("\nja"+Array.FindIndex(массив, n => n == 0));
                 //Console.WriteLine("kaf"+Array.FindLastIndex(массив, n => n == 0));
                 Console.WriteLine("\nВсе элементы кроме первого нулевого элемента: ");
-                for (int  i = 0; i < массив.Length; i++)
+                for (int i = 0; i < массив.Length; i++)
                 {
                     if (i != (Array.FindIndex(массив, n => n == 0)))
                         Console.Write($"{массив[i]} ");
@@ -159,7 +159,7 @@ namespace Обработка_массива
                         Console.Write($"{массив[i]} ");
                 }
                 Console.WriteLine();
-               //Console.WriteLine($"номер первого элемента равного 5: {Array.FindIndex(массив, n => n == 5) + 1}\nномер последнего элемента равного 5: {Array.FindLastIndex(массив, n => n == 5) + 1} ");
+                //Console.WriteLine($"номер первого элемента равного 5: {Array.FindIndex(массив, n => n == 5) + 1}\nномер последнего элемента равного 5: {Array.FindLastIndex(массив, n => n == 5) + 1} ");
             }
             void n4()
             {
@@ -180,50 +180,50 @@ namespace Обработка_массива
                 for (int i = 0; i < a2; i++)
                 {
                     massiv[i] = Math.Round(random.NextDouble() * 150 - 50, 3);
-                   // massiv[i] = random.Next(-50, 100);
+                    // massiv[i] = random.Next(-50, 100);
                 }
                 Array.Sort(massiv);
-                Console.WriteLine("Начальный массив:" + string.Join("; ", massiv ));
+                Console.WriteLine("Начальный массив:" + string.Join("; ", massiv));
                 Console.Write("Введите число a: ");
-                double a = 0;byte oute = 0;string aw;// byte d;
+                double a = 0; byte oute = 0; string aw;// byte d;
                 while (oute == 0)
-                {   
+                {
                     //d=0;
                     aw = Console.ReadLine();
                     if (!double.TryParse(aw, out a))
                         Console.Write("Ошибка! Введите а еще раз ");
-                    else if (a <= massiv[0] || a >= massiv[a2 - 1] || Array.FindAll(massiv, g => g == a).ToArray().Length !=0)
+                    else if (a <= massiv[0] || a >= massiv[a2 - 1] || Array.FindAll(massiv, g => g == a).ToArray().Length != 0)
                         Console.Write("а не удовлетворяет условию задания \nВведите а еще раз ");
-                        else 
-                            oute++;
+                    else
+                        oute++;
                 }
                 //ограничение а не равно не олному из элементов массива 
-                 Console.WriteLine($"a) Все элементы массива меньших {a}: " + string.Join("; ",Array.FindAll(massiv, at => at < a)));
+                Console.WriteLine($"a) Все элементы массива меньших {a}: " + string.Join("; ", Array.FindAll(massiv, at => at < a)));
                 //=================================================
                 Console.Write("Введите число n: ");
-                double n = 0; byte outn  = 0; 
+                double n = 0; byte outn = 0;
                 while (outn == 0)
                 {
                     if (!double.TryParse(Console.ReadLine(), out n))
                         Console.Write("Ошибка! Введите n еще раз ");
-                    else if (n <=massiv[0] || n >massiv[ a2-1])
-                        Console.Write($"n не может быть <= чем 1 элемент массива ({massiv[0]}) и >= чем последний элемент массива массива({massiv[a2-1]})\nВведите n еще раз  ");
+                    else if (n <= massiv[0] || n > massiv[a2 - 1])
+                        Console.Write($"n не может быть <= чем 1 элемент массива ({massiv[0]}) и >= чем последний элемент массива массива({massiv[a2 - 1]})\nВведите n еще раз  ");
                     else
                         outn = 1;
                 }
-                Console.WriteLine($"б) n лежит между {Array.FindLast(massiv, ay => ay < n)} ({Array.FindLastIndex(massiv, ay => ay < n)+ 1}) и {Array.Find(massiv, ay => ay > n)} ({Array.FindIndex(massiv, ay => ay > n) + 1})");
+                Console.WriteLine($"б) n лежит между {Array.FindLast(massiv, ay => ay < n)} ({Array.FindLastIndex(massiv, ay => ay < n) + 1}) и {Array.Find(massiv, ay => ay > n)} ({Array.FindIndex(massiv, ay => ay > n) + 1})");
                 //=================================================
-                double  ak, al, af, ar; //хреново работает 
+                double ak, al, af, ar; //хреново работает 
                 ak = Array.FindLast(massiv, ay => ay < a); //с меньшей стороны
                 al = Array.Find(massiv, ay => ay > a); //с большей стороны
                 af = Math.Round(Math.Abs(Math.Abs(ak) - Math.Abs(a)), 2);
                 ar = Math.Round(Math.Abs(Math.Abs(al) - Math.Abs(a)), 2);
-                if ( af < ar )
-                    Console.WriteLine($"в) Элемент ближайший к {a}: {ak} ({Array.FindLastIndex(massiv, av => av == ak)+1})");
+                if (af < ar)
+                    Console.WriteLine($"в) Элемент ближайший к {a}: {ak} ({Array.FindLastIndex(massiv, av => av == ak) + 1})");
                 else if (af > ar)
-                    Console.WriteLine($"в) Элемент ближайший к {a}: {al} ({Array.FindIndex(massiv, av => av == al)+1})");
-                else 
-                    Console.WriteLine($"в) Элементы, между которыми находится {a} равно удалены от {a}. Их значения и номера элемента {ak} ({Array.FindLastIndex(massiv, av => av == ak) + 1}) и {al} ({Array.FindIndex(massiv, av => av == al)+1})"); //надо дптсать
+                    Console.WriteLine($"в) Элемент ближайший к {a}: {al} ({Array.FindIndex(massiv, av => av == al) + 1})");
+                else
+                    Console.WriteLine($"в) Элементы, между которыми находится {a} равно удалены от {a}. Их значения и номера элемента {ak} ({Array.FindLastIndex(massiv, av => av == ak) + 1}) и {al} ({Array.FindIndex(massiv, av => av == al) + 1})"); //надо дптсать
                 //Console.WriteLine("my: " + af + ", " + ar);
             }
             void n5()
@@ -235,7 +235,7 @@ namespace Обработка_массива
                 for (int i = 0; i < a; i++)
                 {
                     s = 0;
-                    massiv[i] = Math.Round(rnd.NextDouble() * 221 +50, 3);
+                    massiv[i] = Math.Round(rnd.NextDouble() * 221 + 50, 3);
                     while (s == 0)
                     {
                         if (massiv[i] == Array.Find(massiv, n => n == massiv[i]))
@@ -246,7 +246,7 @@ namespace Обработка_массива
                     }
                 }
                 Array.Sort(massiv);
-                Console.WriteLine("Рост пятнадцати учеников: "+string.Join("; ", massiv));
+                Console.WriteLine("Рост пятнадцати учеников: " + string.Join("; ", massiv));
                 double d = 0; byte outd = 0;
                 Console.Write("Введите рост нового ученика: ");
                 while (outd == 0)
@@ -258,11 +258,11 @@ namespace Обработка_массива
                     else
                         outd++;
                 }
-                Console.WriteLine($"Место, которое займет новый ученик в перечне роста учеников: {Array.FindLastIndex(massiv, h => h < d)+2}");
+                Console.WriteLine($"Место, которое займет новый ученик в перечне роста учеников: {Array.FindLastIndex(massiv, h => h < d) + 2}");
             }
-           // Обработка_массива.Обработка_массива МАрк = new Обработка_массива.Обработка_массива(); МАрк.Задание();
-        
-        Console.Write("Для завершения программы нажмите любую клавишу ");
+            // Обработка_массива.Обработка_массива МАрк = new Обработка_массива.Обработка_массива(); МАрк.Задание();
+
+            Console.Write("Для завершения программы нажмите любую клавишу ");
             Console.ReadKey();
         }
     }

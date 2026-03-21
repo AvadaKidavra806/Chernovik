@@ -19,7 +19,11 @@ namespace массив_на_с_
             //Blockshema blockshema = new Blockshema(); blockshema.Nomera();
             //Обработка_массива.Обработка_массива МАрк = new Обработка_массива.Обработка_массива(); МАрк.Задание();
             //Петергоф.Куколка ап = new Петергоф.Куколка(); ап.gd();
-            Изменение_исходного_массива.Изменение_исходного_массива ы = new Изменение_исходного_массива.Изменение_исходного_массива(); ы.Номера();
+            //Изменение_исходного_массива.Изменение_исходного_массива ы = new Изменение_исходного_массива.Изменение_исходного_массива(); ы.Номера();
+            //ReshenieSin.Sin sin= new ReshenieSin.Sin(); sin.sin();
+            //ReshenieSislosh.Sinslosh sinslosh = new ReshenieSislosh.Sinslosh(); sinslosh.sin();
+            Dvumerny_massiv.Ghf ghf = new Dvumerny_massiv.Ghf(); ghf.Edf();
+            //Odnomermassiv.Nap nap = new Odnomermassiv.Nap(); nap.Gha();
             void Счетчик_символов_строки ()
             {
                 string a = Console.ReadLine();
@@ -214,7 +218,7 @@ namespace массив_на_с_
             }
             Недокалькулятор();*/
         }
-        class Program1
+        /*class Program1
         {
             public void Main()
             {
@@ -228,6 +232,6 @@ namespace массив_на_с_
                 Console.WriteLine(string.Join(" ", a.Where(x => a.Count(y => x == y) > 1).Distinct()));
                 Console.ReadKey(true);
             } 
-        }
+        }*/
     }
 }

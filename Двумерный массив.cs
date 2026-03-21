@@ -1710,21 +1710,21 @@ namespace Dvumerny_massiv
                 Console.Write("Введите количество столбцов в массиве: ");
                 int kolvostolb = 0; bool outkolvostolb = true;
                 while (outkolvostolb)
-            {
+                {
                     if (!int.TryParse(Console.ReadLine(), out kolvostolb))
                         Console.Write("Ошибка! Введите кол-во столбцов еще раз ");
                     else if (kolvostolb <= 0)
                         Console.Write("Кол-во столбцов не может быть неположительным. Введите кол-во столбцов еще раз ");
                     else
                         outkolvostolb = false;
-            }
+                }
                 int[,] nums = new int[kolvostrok, kolvostolb];
                 Random rnd = new Random();
                 Console.WriteLine("Двумерный массив: ");
                 for (int i = 0; i < kolvostrok; i++)
                 {
                     for (int j = 0; j < kolvostolb; j++)
-            { 
+                    {
                         nums[i, j] = rnd.Next(-100, 100);
                         Console.Write(nums[i, j] + "\t");
                     }
