@@ -82,6 +82,9 @@ namespace Dvumerny_massiv
                 case 20:
                     n20();  
                     break;
+                case 21:
+                    n21();
+                    break;
                 default:
                     Console.WriteLine("Пока что не готов этот номер");
                     break;
