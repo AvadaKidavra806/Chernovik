@@ -12,7 +12,7 @@ namespace Dvumerny_massiv
             byte NomerZadaniy = 1; bool NomerZadaniyOut = true;
             while (NomerZadaniyOut)
             {
-                if (!byte.TryParse(Console.ReadLine(), out NomerZadaniy) || NomerZadaniy <= 0)
+                if (!byte.TryParse(Console.ReadLine(), out NomerZadaniy))
                     Console.Write("Ошибка! Введите номер задания еще раз ");
                 else if (NomerZadaniy <= 0 || NomerZadaniy > 21)
                     Console.Write("В дз всего 21 заданий, Введите номер задания еще раз ");
@@ -1450,7 +1450,7 @@ namespace Dvumerny_massiv
                     for (int j = 0; j < kolvostolb; j++)
                     {
                         massiv[i, j] = rnd.Next(100);
-                        Console.Write(massiv[i, j] + " ");
+                        Console.Write(massiv[i, j] + "\t");
                     }
                     Console.WriteLine();
                 }
@@ -1500,7 +1500,7 @@ namespace Dvumerny_massiv
                     for (int j = 0; j < kolvostolb; j++)
                     {
                         massiv[i, j] = rnd.Next(100);
-                        Console.Write(massiv[i, j] + " ");
+                        Console.Write(massiv[i, j] + "\t");
                     }
                     Console.WriteLine();
                 }
@@ -1690,9 +1690,9 @@ namespace Dvumerny_massiv
                     Console.WriteLine($"a) в левом верхнем ({nums[0, 0]}) или левом нижнем ({nums[kolvostrok - 1, 0]}) углах нет четные числа");
                 //==============================
                 if ((nums[0, kolvostolb-1] % 10 == 0 || nums[kolvostrok-1, kolvostolb - 1] % 10 == 0))
-                    Console.WriteLine($"б) в правом верхнем ({nums[0, kolvostolb - 1]}) или правом нижнем ({nums[kolvostolb - 1, kolvostolb - 1]}) углах есть числа, оканчивающиеся 0");
+                    Console.WriteLine($"б) в правом верхнем ({nums[0, kolvostolb - 1]}) или правом нижнем ({nums[kolvostrok - 1, kolvostolb - 1]}) углах есть числа, оканчивающиеся 0");
                 else
-                    Console.WriteLine($"б) в правом верхнем ({nums[0, kolvostolb - 1]}) или правом нижнем ({nums[kolvostolb - 1, kolvostolb - 1]}) углах нет числа, оканчивающегося 0");
+                    Console.WriteLine($"б) в правом верхнем ({nums[0, kolvostolb - 1]}) или правом нижнем ({nums[kolvostrok - 1, kolvostolb - 1]}) углах нет числа, оканчивающегося 0");
             }
             void n21()
             {
@@ -1731,15 +1731,15 @@ namespace Dvumerny_massiv
                     Console.WriteLine();
                 }
                 //===============================
-                if ((nums[0, kolvostolb - 1] % 2 == 0 || nums[kolvostrok - 1, kolvostolb - 1] % 2 == 0) && (nums[0, kolvostolb - 1] != 0 && nums[kolvostrok - 1, kolvostolb - 1] != 0))
+                if ((nums[0, kolvostolb - 1] % 2 != 0 || nums[kolvostrok - 1, kolvostolb - 1] % 2 != 0))
                     Console.WriteLine($"a) в правом верхнем ({nums[0, kolvostolb-1]}) или правом нижнем ({nums[kolvostrok - 1, kolvostolb-1]}) углах есть четные числа");
                 else
                     Console.WriteLine($"a) в правом верхнем ({nums[0, kolvostolb - 1]}) или правом нижнем ({nums[kolvostrok - 1, kolvostolb - 1]}) углах нет четных чисел");
                 //==============================
                 if ((nums[0, 0] % 10 == 5 || nums[kolvostrok - 1, 0] % 10 == 5))
-                    Console.WriteLine($"б) в левом верхнем ({nums[0, 0]}) или левом нижнем ({nums[kolvostrok - 1, 0]}) углах есть числа, оканчивающиеся 0");
+                    Console.WriteLine($"б) в левом верхнем ({nums[0, 0]}) или левом нижнем ({nums[kolvostrok - 1, 0]}) углах есть числа, оканчивающиеся 5");
                 else
-                    Console.WriteLine($"б) в левом верхнем ({nums[0, 0]}) или левом нижнем ({nums[kolvostrok - 1, 0]}) углах нет числа, оканчивающегося 0");
+                    Console.WriteLine($"б) в левом верхнем ({nums[0, 0]}) или левом нижнем ({nums[kolvostrok - 1, 0]}) углах нет числа, оканчивающегося 5");
             }
             Console.Write("Для завершения программы нажмите Enter");
             Console.ReadLine();

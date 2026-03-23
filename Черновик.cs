@@ -23,7 +23,8 @@ namespace массив_на_с_
             //ReshenieSin.Sin sin= new ReshenieSin.Sin(); sin.sin();
             //ReshenieSislosh.Sinslosh sinslosh = new ReshenieSislosh.Sinslosh(); sinslosh.sin();
             //Dvumerny_massiv.Ghf ghf = new Dvumerny_massiv.Ghf(); ghf.Edf();
-            MatricaDiagonali.Resheniy resheniy = new MatricaDiagonali.Resheniy(); resheniy.Qwerty();
+            //MatricaDiagonali.Resheniy resheniy = new MatricaDiagonali.Resheniy(); resheniy.Qwerty();
+            Dvumerny_massiv_obrabotka.Ghf ghf = new Dvumerny_massiv_obrabotka.Ghf(); ghf.Edf();
             //Odnomermassiv.Nap nap = new Odnomermassiv.Nap(); nap.Gha();
             void Счетчик_символов_строки ()
             {
