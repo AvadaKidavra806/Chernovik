@@ -21,3 +21,4 @@ C:\Users\student\Documents\Ильенко\Новая папка\obj\Debug\Чер
 C:\Users\student\Documents\Ильенко\Новая папка\obj\Debug\Черновик 1.csproj.CoreCompileInputs.cache
 C:\Users\student\Documents\Ильенко\Новая папка\obj\Debug\Черновик 1.exe
 C:\Users\student\Documents\Ильенко\Новая папка\obj\Debug\Черновик 1.pdb
+C:\Users\Кирилл\Documents\Типа рабочий стол\Черновик 1\obj\Debug\Черновик 1.exe.config

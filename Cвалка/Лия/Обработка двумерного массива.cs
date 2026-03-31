@@ -22,7 +22,7 @@ namespace Dvumerny_massiv_obrabotka
 			}
 			switch (NomerZadaniy)
 			{
-                case 1: n1(); break;
+                case 1: n1(); break; //есть косяк по i, j  в др мб тоже
                 case 2: n2(); break;
                 case 3: n3(); break;
                 case 4: n4(); break;
@@ -131,14 +131,14 @@ namespace Dvumerny_massiv_obrabotka
                         {
                             for (int j = 0; j < kolvostolb; j++)
                             {
-                                nums[j, i] = rnd.Next(100);
-                                if (nums[j, i] == 0)
+                                nums[i, j] = rnd.Next(100);
+                                if (nums[i, j] == 0)
                                     d = false;
                             }
                         }
                         for (int j = 0; j < kolvostolb; j++)
                         {
-                            Console.Write(nums[j, i] + "\t");
+                            Console.Write(nums[i , j] + "\t");
                         }
                     }
 
@@ -146,8 +146,8 @@ namespace Dvumerny_massiv_obrabotka
                     {
                         for (int j = 0; j < kolvostolb; j++)
                         {
-                            nums[j, i] = rnd.Next(100);
-                            Console.Write(nums[j, i] + "\t");
+                            nums[i, j] = rnd.Next(100);
+                            Console.Write(nums[i, j] + "\t");
                         }
                     }
                     Console.WriteLine();
@@ -155,8 +155,11 @@ namespace Dvumerny_massiv_obrabotka
                 //============================
                 int j2 = kolvostolb-1;
                 while (j2 >= 0 && nums[2, j2] != 0)
+                {
                     j2--;
+                }
                 Console.WriteLine("Номер столбца, в котором расположен самый правый элемент 0 в третьей строке: " + (j2 + 1));
+
             }
             void n3 ()
             {
@@ -195,7 +198,7 @@ namespace Dvumerny_massiv_obrabotka
                         for (int j = 0; j < kolvostolb; j++)
                         {
                             nums[i, j] = rnd.Next(100);
-                            if (i == 1)
+                            if (j == 1)
                             {
                                 if (nums[i, j] == 21)
                                     d = false;
@@ -211,12 +214,12 @@ namespace Dvumerny_massiv_obrabotka
                 {
                     for (int j = 0; j < kolvostolb; j++)
                     {
-                        Console.Write(nums[j, i] + "\t");
+                        Console.Write(nums[i, j] + "\t");
                     }
                     Console.WriteLine();
                 }
                 int j2 = 0;
-                while (j2 < kolvostrok && nums[1, j2] != 21)
+                while (j2 < kolvostrok && nums[ j2, 1] != 21)
                     j2++;
                 Console.WriteLine("Номер строки, в которой расположен самый верхний элемент 21 во втором столбце: " + (j2 + 1));
             }
@@ -257,7 +260,7 @@ namespace Dvumerny_massiv_obrabotka
                         for (int j = 0; j < kolvostolb; j++)
                         {
                             nums[i, j] = rnd.Next(100);
-                            if (i == 1)
+                            if (j == 1)
                             {
                                 if (nums[i, j] == 10)
                                     d = false;
@@ -273,7 +276,7 @@ namespace Dvumerny_massiv_obrabotka
                 {
                     for (int j = 0; j < kolvostolb; j++)
                     {
-                        Console.Write(nums[j, i] + "\t");
+                        Console.Write(nums[i, j] + "\t");
                     }
                     Console.WriteLine();
                 }
@@ -380,11 +383,11 @@ namespace Dvumerny_massiv_obrabotka
                     bool asd = true;
                     while (j2 < kolvostrok && asd)
                     {
-                        asd = nums[j2, x - 1] != Chislo;
+                        asd = nums[j2, x - 1] % Chislo != 0;
                         j2++;
                     }
                     if (!asd)
-                        Console.WriteLine($"б) В {x}-м столбце есть {Chislo}. Одна из позиций такого числа: [{j2}, {x}]");
+                        Console.WriteLine($"б) В {x}-м столбце есть число кратное {Chislo}. Одна из позиций такого числа: [{j2}, {x}]");
                     else
                         Console.WriteLine($"б) В {x}-м столбце нет {Chislo}");
                 }

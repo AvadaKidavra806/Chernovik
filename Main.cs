@@ -14,6 +14,7 @@ namespace Main
     {
         static void Main()
         {
+            Console.WriteLine(3 / 2);
             // Program program = new Program(); program.Начало();
             //Дихотомия.Дихотомия dix = new Дихотомия.Дихотомия(); dix.Решение();
             //Blockshema blockshema = new Blockshema(); blockshema.Nomera();
@@ -24,10 +25,11 @@ namespace Main
             //ReshenieSislosh.Sinslosh sinslosh = new ReshenieSislosh.Sinslosh(); sinslosh.sin();
             //Dvumerny_massiv.Ghf ghf = new Dvumerny_massiv.Ghf(); ghf.Edf();
             //MatricaDiagonali.Resheniy resheniy = new MatricaDiagonali.Resheniy(); resheniy.Qwerty();
-            //Dvumerny_massiv_obrabotka.Ghf ghf = new Dvumerny_massiv_obrabotka.Ghf(); ghf.Edf();
             //Odnomermassiv.Nap nap = new Odnomermassiv.Nap(); nap.Gha();
-            Dvumerny_massiv_obrabotka.Ghf Ghf = new Dvumerny_massiv_obrabotka.Ghf(); Ghf.Edf();
+            //Dvumerny_massiv_obrabotka.Ghf Ghf = new Dvumerny_massiv_obrabotka.Ghf(); Ghf.Edf();
             //ClassForMassiv.Help help = new ClassForMassiv.Help(); help.help();
+            //DvumerMasMaxMin.Reshenie reshenie = new DvumerMasMaxMin.Reshenie(); reshenie.Nomerov();
+            Zadachi.Zapolnenie zapolnenie = new Zadachi.Zapolnenie(); zapolnenie.Vuvod();
             Console.Write("Для завершения программы нажмите Enter");
             Console.ReadLine();
         }
