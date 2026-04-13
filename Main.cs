@@ -17,8 +17,9 @@ namespace Main
             //Черновик.Черновик черновик = new Черновик.Черновик(); черновик.Решение();
             //Zadachi.Zapolnenie zapolnenie = new Zadachi.Zapolnenie(); zapolnenie.Vuvod();
             //Raschet.Zadachi zadachi = new Raschet.Zadachi(); zadachi.DvuMassiv();
-            ProverkaUslovia.PosleRaschetov posle = new ProverkaUslovia.PosleRaschetov(); posle.DmumerMassiv();
+            //ProverkaUslovia.PosleRaschetov posle = new ProverkaUslovia.PosleRaschetov(); posle.DmumerMassiv();
             //Otrabotka.Metodov metodov = new Otrabotka.Metodov(); metodov.TipoMain();
+            Rabota.KvadratMassiv massiv = new Rabota.KvadratMassiv(); massiv.DmumerMassiv();
             Console.Write("Для завершения программы нажмите Enter");
             Console.ReadLine();
         }
