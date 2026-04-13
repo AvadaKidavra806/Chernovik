@@ -1,10 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
+//Черновик.Черновик черновик = new Черновик.Черновик(); черновик.Решение();
 namespace Черновик
 {
     public class Черновик
@@ -16,6 +17,7 @@ namespace Черновик
                 string a = Console.ReadLine();
                 Console.WriteLine(a.Length);
             }
+            //Счетчик_символов_строки();
             void gh()
             {
                 Console.Write("Введите функцию ");
@@ -44,9 +46,6 @@ namespace Черновик
                 //-0,59375
             }
             //for_chisl_metod();
-            Console.WriteLine("Это черновик!");
-            Console.Write("Для завершения программы нажмите любую клавишу");
-            Console.ReadKey();
             //Console.Write(Console.ReadLine().ToLower());
             //==========
             /*Console.Write("Введите колво элементов массива ");

@@ -14,12 +14,11 @@ namespace Main
     {
         static void Main()
         {
-            //ClassForMassiv.Help help = new ClassForMassiv.Help(); help.help();
-            //DvumerMasMaxMin.Reshenie reshenie = new DvumerMasMaxMin.Reshenie(); reshenie.Nomerov();
+            //Черновик.Черновик черновик = new Черновик.Черновик(); черновик.Решение();
             //Zadachi.Zapolnenie zapolnenie = new Zadachi.Zapolnenie(); zapolnenie.Vuvod();
-            //Metod.Hellp hellp = new Metod.Hellp(); hellp.Heellp();
-            //ProverkaUslovia.PosleRaschetov posle = new ProverkaUslovia.PosleRaschetov(); posle.DmumerMassiv();
-            Otrabotka.Metodov metodov = new Otrabotka.Metodov(); metodov.TipoMain();
+            //Raschet.Zadachi zadachi = new Raschet.Zadachi(); zadachi.DvuMassiv();
+            ProverkaUslovia.PosleRaschetov posle = new ProverkaUslovia.PosleRaschetov(); posle.DmumerMassiv();
+            //Otrabotka.Metodov metodov = new Otrabotka.Metodov(); metodov.TipoMain();
             Console.Write("Для завершения программы нажмите Enter");
             Console.ReadLine();
         }
