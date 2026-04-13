@@ -1,4 +1,6 @@
-using System;
+п»їusing System;
+using System.Collections.Generic;
+using System.Linq;
 
 //Otrabotka.Metodov metodov = new Otrabotka.Metodov(); metodov.TipoMain();
 namespace Otrabotka
@@ -8,81 +10,148 @@ namespace Otrabotka
     {
         public void TipoMain()
         {
-            Vklad();
+            //Vklad();
             //Rasstoynie();
+            ReshenieNOD();
+            //-------------------------
             //90 187.9
             void Vklad()
             {
-                Console.Write($"Введите сумму вашего вклада ");
+                Console.Write($"Р’РІРµРґРёС‚Рµ СЃСѓРјРјСѓ РІР°С€РµРіРѕ РІРєР»Р°РґР° ");
                 double chislo = 0; bool outchislo = true;
                 while (outchislo)
                 {
                     if (!double.TryParse(Console.ReadLine(), out chislo))
-                        Console.Write($"Ошибка! Сумма вклада не число, введите еще раз ");
+                        Console.Write($"РћС€РёР±РєР°! РЎСѓРјРјР° РІРєР»Р°РґР° РЅРµ С‡РёСЃР»Рѕ, РІРІРµРґРёС‚Рµ РµС‰Рµ СЂР°Р· ");
                     else if (chislo <= 0)
-                        Console.Write($"Сумма вклада не может быть неположительной, введите сумму еще раз ");
+                        Console.Write($"РЎСѓРјРјР° РІРєР»Р°РґР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РЅРµРїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕР№, РІРІРµРґРёС‚Рµ СЃСѓРјРјСѓ РµС‰Рµ СЂР°Р· ");
                     else
                         outchislo = false;
                 }
-                for (int i = 0; i < 12; i++)
+                Console.Write("Р’РІРµРґРёС‚Рµ РЅР° РєР°РєРѕРµ РєРѕР»-РІРѕ РјРµСЃСЏС†РµРІ РІС‹ РґРµР»Р°РµС‚Рµ РІРєР»Р°Рґ ");
+                int KolvoMesyc = 0; bool OutKolvoMesyc = true;
+                while (OutKolvoMesyc)
+                {
+                    if (!int.TryParse(Console.ReadLine(), out KolvoMesyc))
+                        Console.Write("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ РјРµСЃСЏС†РµРІ РµС‰Рµ СЂР°Р· ");
+                    else if (KolvoMesyc <= 0)
+                        Console.Write("РљРѕР»-РІРѕ РјРµСЃСЏС†РµРІ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РЅРµРїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј. Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ РјРµСЃСЏС†РµРІ РµС‰Рµ СЂР°Р· ");
+                    else 
+                        OutKolvoMesyc = false;
+                }
+                for (int i = 0; i < KolvoMesyc; i++)
                 {
                     Procents(ref chislo, out int p);
-                    //Console.WriteLine("Сумма вклада с начисленными процентами: " + chislo + ". Начисленно " + p + $"% за {i+1} месяц");
+                    //Console.WriteLine("РЎСѓРјРјР° РІРєР»Р°РґР° СЃ РЅР°С‡РёСЃР»РµРЅРЅС‹РјРё РїСЂРѕС†РµРЅС‚Р°РјРё: " + Math.Round(chislo, 3) + ". РќР°С‡РёСЃР»РµРЅРЅРѕ " + p + $"% Р·Р° {i+1}-Р№ РјРµСЃСЏС†");
                 }
-                Console.WriteLine("Сумма вклада с начисленными процентами: " + chislo);
-            }
-            void Procents(ref double Chislo, out int proc )
-            {
-                if (Chislo < 100)
+                Console.WriteLine("РЎСѓРјРјР° РІРєР»Р°РґР° СЃ РЅР°С‡РёСЃР»РµРЅРЅС‹РјРё РїСЂРѕС†РµРЅС‚Р°РјРё: " + Math.Round(chislo, 3));
+                void Procents(ref double Chislo, out int proc)
                 {
-                    Chislo *= 1.05;
-                    proc = 5;
-                }
-                else if (Chislo >= 100 && Chislo <= 200)
-                {
-                    Chislo *= 1.07;
-                    proc = 7;
-                }
-                else
-                { 
-                    Chislo *= 1.10;
-                    proc = 10;
+                    if (Chislo < 100)
+                    {
+                        Chislo *= 1.05;
+                        proc = 5;
+                    }
+                    else if (Chislo >= 100 && Chislo <= 200)
+                    {
+                        Chislo *= 1.07;
+                        proc = 7;
+                    }
+                    else
+                    {
+                        Chislo *= 1.10;
+                        proc = 10;
+                    }
                 }
             }
-            //===================================================================================================================================
+            //===================================
             void Rasstoynie()
             {
-                Console.Write("Введите x первой точки отрезка ");
-                double x1 = VvodPeremennih();
-                Console.Write("Введите y первой точки отрезка ");
-                double y1 = VvodPeremennih();
-                Console.Write("Введите x второй точки отрезка ");
-                double x2 = VvodPeremennih();
-                Console.Write("Введите y второй точки отрезка ");
-                double y2 = VvodPeremennih();
-                Console.WriteLine($"Расстояние между точками с координатами ({x1} ; {y1}) и ({x2} ; {y2}) равно " + Math.Round(Vuchisleni(x1, x2, y1, y2),5));
-                //============
-                double VvodPeremennih()
                 {
-
-                    double q = 1 ; bool outq = true;
-                    while (outq)
+                    Console.Write("Р’РІРµРґРёС‚Рµ x РїРµСЂРІРѕР№ С‚РѕС‡РєРё РѕС‚СЂРµР·РєР° ");
+                    double x1 = VvodPeremennih();
+                    Console.Write("Р’РІРµРґРёС‚Рµ y РїРµСЂРІРѕР№ С‚РѕС‡РєРё РѕС‚СЂРµР·РєР° ");
+                    double y1 = VvodPeremennih();
+                    Console.Write("Р’РІРµРґРёС‚Рµ x РІС‚РѕСЂРѕР№ С‚РѕС‡РєРё РѕС‚СЂРµР·РєР° ");
+                    double x2 = VvodPeremennih();
+                    Console.Write("Р’РІРµРґРёС‚Рµ y РІС‚РѕСЂРѕР№ С‚РѕС‡РєРё РѕС‚СЂРµР·РєР° ");
+                    double y2 = VvodPeremennih();
+                    Console.WriteLine($"Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё ({x1} ; {y1}) Рё ({x2} ; {y2}) СЂР°РІРЅРѕ " + Math.Round(Vuchisleni(x1, x2, y1, y2), 5));
+                    //============
+                    double VvodPeremennih()
                     {
-                        if (double.TryParse(Console.ReadLine(), out q) == false)
-                            Console.Write("Неверный ввод, координата должна быть числом, введите еще раз ");
-                        else
-                            outq = false;
+                        double q = 1; bool outq = true;
+                        while (outq)
+                        {
+                            if (!double.TryParse(Console.ReadLine(), out q))
+                                Console.Write("РќРµРІРµСЂРЅС‹Р№ РІРІРѕРґ, РєРѕРѕСЂРґРёРЅР°С‚Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ С‡РёСЃР»РѕРј. Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ РµС‰Рµ СЂР°Р· ");
+                            else
+                                outq = false;
+                        }
+                        return q;
                     }
-                    return q;
                 }
                 //==============
-                
+                double Vuchisleni(double x1, double x2, double y1, double y2)
+                {
+                    return Math.Sqrt((Math.Pow(x2 - x1, 2)) + (Math.Pow(y2 - y1, 2)));
+                }
             }
-            double Vuchisleni(double x1,double x2,double y1, double y2)
+            //===================================
+            void ReshenieNOD ()
             {
-                return Math.Sqrt((Math.Pow(x2 - x1, 2)) + (Math.Pow(y2 - y1, 2)));
+                Console.Write("Р’РІРµРґРёС‚Рµ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р° РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РќРћР” С‡РµСЂРµР· Р·РїС‚ РёР»Рё РїСЂРѕР±РµР» (5, 10, ...) ");
+                List<string> ChislaString = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                List <int> ChislaInt = new List <int>(ChislaString.Count);
+                bool OutChisla = true;
+                while (OutChisla)
+                {
+                    int i = 0; bool Indikator = false;
+                    while (i < ChislaString.Count)
+                    {
+                        if (!int.TryParse(ChislaString[i], out int hellp))
+                        {
+                            Indikator = true;
+                        }
+                        else
+                            ChislaInt.Add(Math.Abs(hellp));
+                        i++;
+                    }
+                    if (Indikator || ChislaString.Count == 0)
+                    {
+                        Console.Write("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С‡РёСЃР»Р° РµС‰Рµ СЂР°Р· ");
+                        ChislaString = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                        ChislaInt = new List<int>(ChislaString.Count);
+                    }
+                    else
+                        OutChisla = false;
+                }
+                ChislaInt.Sort();
+                ChislaInt.Reverse();
+                Console.WriteLine("РќРћР”: " + BigNOD(ChislaInt.ToArray()));
+                int BigNOD(int [] Chisla)
+                {
+                    int PromeshutResut = Chisla[0];
+                    for (int i = 0; i < Chisla.Length - 1; i++)
+                        PromeshutResut = NOD(PromeshutResut, Chisla[i + 1]);
+                    return PromeshutResut;
+                }
+                int NOD(int FirstChuislo, int SecondChislo)
+                {
+                    int Ostatok;
+                    do
+                    {
+                        Ostatok = FirstChuislo % SecondChislo;
+                        if (Ostatok != 0)
+                        {
+                            FirstChuislo = SecondChislo;
+                            SecondChislo = Ostatok;
+                        }
+                    }
+                    while (Ostatok != 0);
+                    return SecondChislo;
+                }
             }
-
         }
     }   
 }

@@ -38,3 +38,11 @@ C:\Типа рабочий стол\Chernovik\obj\Debug\Черновик 1.exe.c
 C:\Типа рабочий стол\Chernovik\obj\Debug\Черновик 1.csproj.CoreCompileInputs.cache
 C:\Типа рабочий стол\Chernovik\obj\Debug\Черновик 1.exe
 C:\Типа рабочий стол\Chernovik\obj\Debug\Черновик 1.pdb
+C:\Users\Кирилл\Source\Repos\Chernovik\bin\Debug\Черновик 1.exe.config
+C:\Users\Кирилл\Source\Repos\Chernovik\bin\Debug\Черновик 1.exe
+C:\Users\Кирилл\Source\Repos\Chernovik\bin\Debug\Черновик 1.pdb
+C:\Users\Кирилл\Source\Repos\Chernovik\obj\Debug\Черновик 1.csproj.AssemblyReference.cache
+C:\Users\Кирилл\Source\Repos\Chernovik\obj\Debug\Черновик 1.exe.config
+C:\Users\Кирилл\Source\Repos\Chernovik\obj\Debug\Черновик 1.csproj.CoreCompileInputs.cache
+C:\Users\Кирилл\Source\Repos\Chernovik\obj\Debug\Черновик 1.exe
+C:\Users\Кирилл\Source\Repos\Chernovik\obj\Debug\Черновик 1.pdb
