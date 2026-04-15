@@ -45,11 +45,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Задачи на заполнение и вывод.cs" />
     <Compile Include="Проверка условия после выполнения расчетов в двумерном массиве.cs" />
     <Compile Include="Работа с квадратными массивами.cs" />
-    <Compile Include="Расчетные_задачи_с_двумерным_массивом.cs" />
-    <Compile Include="РПМ отработка методов %28вклад, расстояние%29.cs" />
     <Compile Include="Черновик.cs" />
   </ItemGroup>
   <ItemGroup>
