@@ -71,3 +71,11 @@ C:\Users\student.201-05\Documents\Калякин Ильенко\Алгоритм
 C:\Users\student.201-05\Documents\Калякин Ильенко\Алгоритмы\obj\Debug\Черновик 1.csproj.CoreCompileInputs.cache
 C:\Users\student.201-05\Documents\Калякин Ильенко\Алгоритмы\obj\Debug\Черновик 1.exe
 C:\Users\student.201-05\Documents\Калякин Ильенко\Алгоритмы\obj\Debug\Черновик 1.pdb
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\bin\Debug\Черновик 1.exe.config
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\bin\Debug\Черновик 1.exe
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\bin\Debug\Черновик 1.pdb
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\obj\Debug\Черновик 1.csproj.AssemblyReference.cache
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\obj\Debug\Черновик 1.exe.config
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\obj\Debug\Черновик 1.csproj.CoreCompileInputs.cache
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\obj\Debug\Черновик 1.exe
+C:\Типа рабочий стол\Колледжные дела\Алгоритмы\obj\Debug\Черновик 1.pdb
