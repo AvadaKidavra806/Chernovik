@@ -12,7 +12,8 @@ namespace Main
             //ProverkaUslovia.PosleRaschetov posle = new ProverkaUslovia.PosleRaschetov(); posle.DmumerMassiv();
             //Rabota.KvadratMassiv massiv = new Rabota.KvadratMassiv(); massiv.DmumerMassiv();
             //RabotaSNeskolkimi.Dvumerniye mas = new RabotaSNeskolkimi.Dvumerniye(); mas.Massivami();
-            Zadaniy.For hgf = new Zadaniy.For(); hgf.TipoMain(); //дз до конца
+            //Zadaniy.For hgf = new Zadaniy.For(); hgf.TipoMain(); //дз до конца
+            Stroki.AAAAAA aAAAAA = new Stroki.AAAAAA(); aAAAAA.TipoMain();
             Console.Write("Для завершения программы нажмите Enter"); 
             Console.ReadLine(); 
         }
