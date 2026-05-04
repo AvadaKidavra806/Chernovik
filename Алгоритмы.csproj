@@ -49,6 +49,7 @@
     <Compile Include="Проверка условия после выполнения расчетов в двумерном массиве.cs" />
     <Compile Include="Работа с квадратными массивами.cs" />
     <Compile Include="Работа с несколькими двумерными массивами.cs" />
+    <Compile Include="Работа с символами строки.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
